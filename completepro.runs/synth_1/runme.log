@@ -1,0 +1,728 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 431.293 ; gain = 128.996
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14216
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [G:/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-6901] identifier 'HS_FRONT_PORCH' is used before its declaration [C:/Users/HP/Downloads/FPGA/FPGA/horizontal_counter.v:18]
+WARNING: [Synth 8-6901] identifier 'HS_FRONT_PORCH' is used before its declaration [C:/Users/HP/Downloads/FPGA/FPGA/horizontal_counter.v:18]
+WARNING: [Synth 8-9400] empty statement in sequential block [C:/Users/HP/Downloads/FPGA/FPGA/lookuptable.v:1430]
+WARNING: [Synth 8-9400] empty statement in sequential block [C:/Users/HP/Downloads/FPGA/FPGA/ov7670_registers.v:326]
+INFO: [Synth 8-11241] undeclared symbol 'btn_db', assumed default net type 'wire' [C:/Users/HP/Downloads/FPGA/FPGA/ov7670_top.v:37]
+WARNING: [Synth 8-6901] identifier 'VS_FRONT_PORCH' is used before its declaration [C:/Users/HP/Downloads/FPGA/FPGA/vertical_counter.v:19]
+WARNING: [Synth 8-6901] identifier 'VS_FRONT_PORCH' is used before its declaration [C:/Users/HP/Downloads/FPGA/FPGA/vertical_counter.v:19]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 1234.699 ; gain = 408.012
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/HP/Downloads/FPGA/FPGA/top.v:36]
+INFO: [Synth 8-6157] synthesizing module 'clock_enable_param' [C:/Users/HP/Downloads/FPGA/FPGA/clock_enable_param.v:5]
+	Parameter WAIT bound to: 1 - type: integer 
+	Parameter WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_enable_param' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/clock_enable_param.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/HP/Downloads/FPGA/FPGA/clock_divider_param.v:6]
+	Parameter DIVIDER bound to: 2 - type: integer 
+	Parameter WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/clock_divider_param.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider__parameterized0' [C:/Users/HP/Downloads/FPGA/FPGA/clock_divider_param.v:6]
+	Parameter DIVIDER bound to: 1 - type: integer 
+	Parameter WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider__parameterized0' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/clock_divider_param.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pattern_gen' [C:/Users/HP/Downloads/FPGA/FPGA/pattern_gen.v:4]
+	Parameter DEPTH bound to: 76800 - type: integer 
+	Parameter ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter SPEED bound to: 300 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pattern_gen' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/pattern_gen.v:4]
+INFO: [Synth 8-6157] synthesizing module 'rams_tdp_rf_rf' [C:/Users/HP/Downloads/FPGA/FPGA/blockram.v:10]
+	Parameter DEPTH bound to: 76800 - type: integer 
+	Parameter ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rams_tdp_rf_rf' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/blockram.v:10]
+WARNING: [Synth 8-7071] port 'web' of module 'rams_tdp_rf_rf' is unconnected for instance 'bram3' [C:/Users/HP/Downloads/FPGA/FPGA/top.v:207]
+WARNING: [Synth 8-7071] port 'dib' of module 'rams_tdp_rf_rf' is unconnected for instance 'bram3' [C:/Users/HP/Downloads/FPGA/FPGA/top.v:207]
+WARNING: [Synth 8-7023] instance 'bram3' of module 'rams_tdp_rf_rf' has 12 connections declared, but only 10 given [C:/Users/HP/Downloads/FPGA/FPGA/top.v:207]
+INFO: [Synth 8-6157] synthesizing module 'vga_module' [C:/Users/HP/Downloads/FPGA/FPGA/vga_module.v:1]
+	Parameter ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter DEPTH bound to: 76800 - type: integer 
+	Parameter HSYNC_CLKS bound to: 800 - type: integer 
+	Parameter HSYNC_DISPLAY bound to: 640 - type: integer 
+	Parameter HSYNC_PULSE bound to: 96 - type: integer 
+	Parameter HSYNC_FRONT_PORCH bound to: 16 - type: integer 
+	Parameter HSYNC_BACK_PORCH bound to: 48 - type: integer 
+	Parameter VSYNC_LINES bound to: 521 - type: integer 
+	Parameter VSYNC_DISPLAY bound to: 480 - type: integer 
+	Parameter VSYNC_PULSE bound to: 2 - type: integer 
+	Parameter VSYNC_FRONT_PORCH bound to: 10 - type: integer 
+	Parameter VSYNC_BACK_PORCH bound to: 29 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'horizontal_counter' [C:/Users/HP/Downloads/FPGA/FPGA/horizontal_counter.v:1]
+	Parameter HSYNC_CLKS bound to: 800 - type: integer 
+	Parameter HSYNC_DISPLAY bound to: 640 - type: integer 
+	Parameter HSYNC_PULSE bound to: 96 - type: integer 
+	Parameter HSYNC_FRONT_PORCH bound to: 16 - type: integer 
+	Parameter HSYNC_BACK_PORCH bound to: 48 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/HP/Downloads/FPGA/FPGA/horizontal_counter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'horizontal_counter' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/horizontal_counter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vertical_counter' [C:/Users/HP/Downloads/FPGA/FPGA/vertical_counter.v:1]
+	Parameter VSYNC_LINES bound to: 521 - type: integer 
+	Parameter VSYNC_DISPLAY bound to: 480 - type: integer 
+	Parameter VSYNC_PULSE bound to: 2 - type: integer 
+	Parameter VSYNC_FRONT_PORCH bound to: 10 - type: integer 
+	Parameter VSYNC_BACK_PORCH bound to: 29 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/HP/Downloads/FPGA/FPGA/vertical_counter.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'vertical_counter' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/vertical_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_module' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/vga_module.v:1]
+INFO: [Synth 8-6157] synthesizing module 'com_to_mem' [C:/Users/HP/Downloads/FPGA/FPGA/com_to_mem_module.v:11]
+	Parameter WAIT bound to: 1 - type: integer 
+	Parameter WAIT_WIDTH bound to: 2 - type: integer 
+	Parameter ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter DEPTH bound to: 76800 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'com_to_mem_FSM' [C:/Users/HP/Downloads/FPGA/FPGA/com_to_mem_FSM_hex.v:5]
+	Parameter ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter DEPTH bound to: 76800 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'com_to_mem_FSM' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/com_to_mem_FSM_hex.v:5]
+INFO: [Synth 8-6157] synthesizing module 'bin_7segment' [C:/Users/HP/Downloads/FPGA/FPGA/7segment.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'bin_7segment' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/7segment.v:8]
+INFO: [Synth 8-6157] synthesizing module 'UART_Loopback_module' [C:/Users/HP/Downloads/FPGA/FPGA/UART_Loopback_module.v:9]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'UART_RX' [C:/Users/HP/Downloads/FPGA/FPGA/UART_RX.v:16]
+	Parameter CLKS_PER_BIT bound to: 868 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'UART_RX' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/UART_RX.v:16]
+INFO: [Synth 8-6157] synthesizing module 'UART_TX' [C:/Users/HP/Downloads/FPGA/FPGA/UART_TX.v:14]
+	Parameter CLKS_PER_BIT bound to: 868 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'UART_TX' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/UART_TX.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Loopback_module' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/UART_Loopback_module.v:9]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider__parameterized1' [C:/Users/HP/Downloads/FPGA/FPGA/clock_divider_param.v:6]
+	Parameter DIVIDER bound to: 1000 - type: integer 
+	Parameter WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider__parameterized1' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/clock_divider_param.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'com_to_mem' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/com_to_mem_module.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ov7670_top' [C:/Users/HP/Downloads/FPGA/FPGA/ov7670_top.v:1]
+	Parameter CAM_DATA_WIDTH bound to: 12 - type: integer 
+	Parameter CAM_LINE bound to: 9 - type: integer 
+	Parameter CAM_PIXEL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'debounce_switch' [C:/Users/HP/Downloads/FPGA/FPGA/debounce_switch.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'debounce_switch' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/debounce_switch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ov7670_capture' [C:/Users/HP/Downloads/FPGA/FPGA/ov7670_capture.v:1]
+	Parameter CAM_DATA_WIDTH bound to: 12 - type: integer 
+	Parameter CAM_LINE bound to: 9 - type: integer 
+	Parameter CAM_PIXEL bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ov7670_capture' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/ov7670_capture.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ov7670_controller' [C:/Users/HP/Downloads/FPGA/FPGA/ov7670_controller.v:2]
+INFO: [Synth 8-6157] synthesizing module 'i2c_sender' [C:/Users/HP/Downloads/FPGA/FPGA/i2c_sender.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_sender' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/i2c_sender.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ov7670_registers' [C:/Users/HP/Downloads/FPGA/FPGA/ov7670_registers.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ov7670_registers' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/ov7670_registers.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ov7670_controller' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/ov7670_controller.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ov7670_top' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/ov7670_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'imag_procesor' [C:/Users/HP/Downloads/FPGA/FPGA/imag_procesor.v:1]
+	Parameter CAM_DATA_WIDTH bound to: 12 - type: integer 
+	Parameter CAM_LINE bound to: 9 - type: integer 
+	Parameter CAM_PIXEL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'imag_save' [C:/Users/HP/Downloads/FPGA/FPGA/imag_save.v:1]
+	Parameter CAM_DATA_WIDTH bound to: 12 - type: integer 
+	Parameter CAM_LINE bound to: 9 - type: integer 
+	Parameter CAM_PIXEL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'address_gen' [C:/Users/HP/Downloads/FPGA/FPGA/address_gen.v:3]
+	Parameter CAM_DATA_WIDTH bound to: 12 - type: integer 
+	Parameter CAM_LINE bound to: 9 - type: integer 
+	Parameter CAM_PIXEL bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'address_gen' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/address_gen.v:3]
+INFO: [Synth 8-6157] synthesizing module 'overlay' [C:/Users/HP/Downloads/FPGA/FPGA/overlay.v:1]
+	Parameter CAM_DATA_WIDTH bound to: 12 - type: integer 
+	Parameter CAM_LINE bound to: 9 - type: integer 
+	Parameter CAM_PIXEL bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'overlay' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/overlay.v:1]
+INFO: [Synth 8-6157] synthesizing module 'two_cam_one_screen' [C:/Users/HP/Downloads/FPGA/FPGA/two_cam_one_screen.v:1]
+	Parameter CAM_DATA_WIDTH bound to: 12 - type: integer 
+	Parameter CAM_LINE bound to: 9 - type: integer 
+	Parameter CAM_PIXEL bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'two_cam_one_screen' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/two_cam_one_screen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'imag_save' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/imag_save.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rgb2gray' [C:/Users/HP/Downloads/FPGA/FPGA/rgb2gray.v:1]
+	Parameter CAM_DATA_WIDTH bound to: 12 - type: integer 
+	Parameter CAM_LINE bound to: 9 - type: integer 
+	Parameter CAM_PIXEL bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rgb2gray' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/rgb2gray.v:1]
+INFO: [Synth 8-6157] synthesizing module 'imag_transform' [C:/Users/HP/Downloads/FPGA/FPGA/imag_transform.v:1]
+	Parameter CAM_DATA_WIDTH bound to: 12 - type: integer 
+	Parameter CAM_LINE bound to: 9 - type: integer 
+	Parameter CAM_PIXEL bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lookuptable' [C:/Users/HP/Downloads/FPGA/FPGA/lookuptable.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'lookuptable' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/lookuptable.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'imag_transform' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/imag_transform.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_reader' [C:/Users/HP/Downloads/FPGA/FPGA/reg_reader.v:7]
+	Parameter CAM_LINE bound to: 9 - type: integer 
+	Parameter CAM_PIXEL bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'reg_reader' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/reg_reader.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'imag_procesor' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/imag_procesor.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rams_tdp_rf_rf__parameterized0' [C:/Users/HP/Downloads/FPGA/FPGA/blockram.v:10]
+	Parameter DEPTH bound to: 88 - type: integer 
+	Parameter ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter DATA_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rams_tdp_rf_rf__parameterized0' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/blockram.v:10]
+INFO: [Synth 8-6157] synthesizing module 'default_reg_writer' [C:/Users/HP/Downloads/FPGA/FPGA/default_reg_writer.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'default_reg_writer' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/default_reg_writer.v:7]
+INFO: [Synth 8-6157] synthesizing module 'mode_selector' [C:/Users/HP/Downloads/FPGA/FPGA/mode_selector.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'mode_selector' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/mode_selector.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/HP/Downloads/FPGA/FPGA/top.v:36]
+WARNING: [Synth 8-7129] Port im_p[1] in module imag_transform is either unconnected or has no load
+WARNING: [Synth 8-7129] Port im_p[0] in module imag_transform is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_imag_resized_cam1 in module imag_save is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_imag_resized_cam2 in module imag_save is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TX_Done in module com_to_mem_FSM is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1353.855 ; gain = 527.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1353.855 ; gain = 527.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1353.855 ; gain = 527.168
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.161 . Memory (MB): peak = 1353.855 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/HP/Downloads/FPGA/FPGA/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/HP/Downloads/FPGA/FPGA/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/HP/Downloads/FPGA/FPGA/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1464.777 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 1464.777 ; gain = 0.000
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [G:/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:48 . Memory (MB): peak = 1464.777 ; gain = 638.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:48 . Memory (MB): peak = 1464.777 ; gain = 638.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:48 . Memory (MB): peak = 1464.777 ; gain = 638.090
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'r_state_reg' in module 'horizontal_counter'
+INFO: [Synth 8-802] inferred FSM for state register 'r_state_reg' in module 'vertical_counter'
+INFO: [Synth 8-802] inferred FSM for state register 'r_state_reg' in module 'com_to_mem_FSM'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'bin_7segment'
+INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'UART_TX'
+WARNING: [Synth 8-6040] Register address_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+INFO: [Synth 8-3971] The signal "rams_tdp_rf_rf:/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+          HS_FRONT_PORCH |                               00 |                              000
+                HS_PULSE |                               01 |                              001
+           HS_BACK_PORCH |                               10 |                              010
+              HS_DISPLAY |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_state_reg' using encoding 'sequential' in module 'horizontal_counter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+          VS_FRONT_PORCH |                               00 |                              000
+                VS_PULSE |                               01 |                              001
+           VS_BACK_PORCH |                               10 |                              010
+              VS_DISPLAY |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_state_reg' using encoding 'sequential' in module 'vertical_counter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                             0000
+              GET_ADDR_W |                             0101 |                             0001
+             GET_VALUE_W |                             0100 |                             0010
+               WRITE_MEM |                             0000 |                             0011
+              GET_ADDR_R |                             0010 |                             0100
+                READ_MEM |                             0011 |                             0101
+          GET_ADDR_W_REG |                             0110 |                             0110
+         GET_VALUE_W_REG |                             0111 |                             0111
+           WRITE_MEM_REG |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_state_reg' using encoding 'sequential' in module 'com_to_mem_FSM'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     ONE |                               00 |                               00
+                     TWO |                               01 |                               01
+                   THREE |                               10 |                               10
+                    FOUR |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'bin_7segment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                            00001 |                              000
+            TX_START_BIT |                            00010 |                              001
+            TX_DATA_BITS |                            00100 |                              010
+             TX_STOP_BIT |                            01000 |                              011
+                 CLEANUP |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'one-hot' in module 'UART_TX'
+INFO: [Synth 8-3971] The signal "rams_tdp_rf_rf__parameterized0:/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:52 . Memory (MB): peak = 1464.777 ; gain = 638.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   30 Bit       Adders := 12    
+	   3 Input   25 Bit       Adders := 1     
+	   2 Input   24 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 10    
+	   2 Input    9 Bit       Adders := 10    
+	   2 Input    7 Bit       Adders := 5     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 7     
+	   2 Input    2 Bit       Adders := 4     
++---Registers : 
+	               38 Bit    Registers := 10    
+	               37 Bit    Registers := 6     
+	               32 Bit    Registers := 5     
+	               30 Bit    Registers := 18    
+	               29 Bit    Registers := 6     
+	               25 Bit    Registers := 46    
+	               24 Bit    Registers := 1     
+	               17 Bit    Registers := 4     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 31    
+	               11 Bit    Registers := 4     
+	               10 Bit    Registers := 30    
+	                9 Bit    Registers := 27    
+	                8 Bit    Registers := 10    
+	                7 Bit    Registers := 7     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 8     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 65    
++---RAMs : 
+	             900K Bit	(76800 X 12 bit)          RAMs := 1     
+	               2K Bit	(88 X 25 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 4     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 4     
+	   2 Input   25 Bit        Muxes := 4     
+	   4 Input   25 Bit        Muxes := 5     
+	   9 Input   25 Bit        Muxes := 1     
+	  12 Input   25 Bit        Muxes := 2     
+	   4 Input   21 Bit        Muxes := 1     
+	   4 Input   20 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 9     
+	   9 Input   17 Bit        Muxes := 1     
+	  10 Input   17 Bit        Muxes := 1     
+	   3 Input   17 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 18    
+	   9 Input   12 Bit        Muxes := 1     
+	   4 Input   10 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 12    
+	   6 Input   10 Bit        Muxes := 1     
+	   5 Input   10 Bit        Muxes := 1     
+	   4 Input    9 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 9     
+	   2 Input    8 Bit        Muxes := 2     
+	   6 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 4     
+	   4 Input    7 Bit        Muxes := 1     
+	   9 Input    7 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 5     
+	   2 Input    4 Bit        Muxes := 4     
+	   9 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 5     
+	   9 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 1     
+	   7 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 73    
+	   4 Input    1 Bit        Muxes := 24    
+	  10 Input    1 Bit        Muxes := 1     
+	   9 Input    1 Bit        Muxes := 8     
+	  12 Input    1 Bit        Muxes := 16    
+	   6 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 10    
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP o_addr1, operation Mode is: (A:0x280)*B2.
+DSP Report: register o_addr1 is absorbed into DSP o_addr1.
+DSP Report: operator o_addr1 is absorbed into DSP o_addr1.
+WARNING: [Synth 8-6040] Register ov7670_controller/ov7670_registers/address_reg_rep_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register ov7670_controller/ov7670_registers/address_reg_rep_rep_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+DSP Report: Generating DSP imag_transform_cam1/r_temp_22_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam1/r_temp_22_reg0 is absorbed into DSP imag_transform_cam1/r_temp_22_reg0.
+DSP Report: Generating DSP imag_transform_cam1/r_temp_12_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam1/r_temp_12_reg0 is absorbed into DSP imag_transform_cam1/r_temp_12_reg0.
+DSP Report: Generating DSP imag_transform_cam1/r_temp_y3_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam1/r_temp_y3_reg0 is absorbed into DSP imag_transform_cam1/r_temp_y3_reg0.
+DSP Report: Generating DSP imag_transform_cam1/r_temp_21_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam1/r_temp_21_reg0 is absorbed into DSP imag_transform_cam1/r_temp_21_reg0.
+DSP Report: Generating DSP imag_transform_cam1/r_temp_11_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam1/r_temp_11_reg0 is absorbed into DSP imag_transform_cam1/r_temp_11_reg0.
+DSP Report: Generating DSP imag_transform_cam1/r_temp_x3_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam1/r_temp_x3_reg0 is absorbed into DSP imag_transform_cam1/r_temp_x3_reg0.
+DSP Report: Generating DSP imag_transform_cam1/r_temp_23_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam1/r_temp_23_reg0 is absorbed into DSP imag_transform_cam1/r_temp_23_reg0.
+DSP Report: Generating DSP imag_transform_cam1/r_temp_13_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam1/r_temp_13_reg0 is absorbed into DSP imag_transform_cam1/r_temp_13_reg0.
+DSP Report: Generating DSP imag_transform_cam2/r_temp_22_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam2/r_temp_22_reg0 is absorbed into DSP imag_transform_cam2/r_temp_22_reg0.
+DSP Report: Generating DSP imag_transform_cam2/r_temp_12_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam2/r_temp_12_reg0 is absorbed into DSP imag_transform_cam2/r_temp_12_reg0.
+DSP Report: Generating DSP imag_transform_cam2/r_temp_y3_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam2/r_temp_y3_reg0 is absorbed into DSP imag_transform_cam2/r_temp_y3_reg0.
+DSP Report: Generating DSP imag_transform_cam2/r_temp_21_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam2/r_temp_21_reg0 is absorbed into DSP imag_transform_cam2/r_temp_21_reg0.
+DSP Report: Generating DSP imag_transform_cam2/r_temp_11_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam2/r_temp_11_reg0 is absorbed into DSP imag_transform_cam2/r_temp_11_reg0.
+DSP Report: Generating DSP imag_transform_cam2/r_temp_x3_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam2/r_temp_x3_reg0 is absorbed into DSP imag_transform_cam2/r_temp_x3_reg0.
+DSP Report: Generating DSP imag_transform_cam2/r_temp_23_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam2/r_temp_23_reg0 is absorbed into DSP imag_transform_cam2/r_temp_23_reg0.
+DSP Report: Generating DSP imag_transform_cam2/r_temp_13_reg0, operation Mode is: A*B.
+DSP Report: operator imag_transform_cam2/r_temp_13_reg0 is absorbed into DSP imag_transform_cam2/r_temp_13_reg0.
+WARNING: [Synth 8-7129] Port TX_Done in module com_to_mem_FSM is either unconnected or has no load
+INFO: [Synth 8-3971] The signal "bram3/ram_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "top/bram_reg/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:01:16 . Memory (MB): peak = 1464.777 ; gain = 638.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++--------------+---------------------------------------------+---------------+----------------+
+|Module Name   | RTL Object                                  | Depth x Width | Implemented As | 
++--------------+---------------------------------------------+---------------+----------------+
+|ov7670_top    | ov7670_controller/ov7670_registers/sreg_reg | 512x16        | Block RAM      | 
+|ov7670_top    | ov7670_controller/ov7670_registers/sreg_reg | 512x16        | Block RAM      | 
+|imag_procesor | imag_transform_cam1/lookuptable/r_w_inv_reg | 4096x12       | Block RAM      | 
+|imag_procesor | imag_transform_cam2/lookuptable/r_w_inv_reg | 4096x12       | Block RAM      | 
++--------------+---------------------------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|bram3       | ram_reg          | 75 K x 12(READ_FIRST)  | W | R | 75 K x 12(READ_FIRST)  | W | R | Port A and B     | 0      | 36     | 
+|top         | bram_reg/ram_reg | 88 x 25(NO_CHANGE)     | W |   | 88 x 25(READ_FIRST)    | W | R | Port A and B     | 0      | 1      | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|pattern_gen    | (A:0x280)*B2 | 8      | 10     | -      | -      | 18     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 10     | -      | -      | 35     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 11     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 12     | -      | -      | 37     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 10     | -      | -      | 35     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 11     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 12     | -      | -      | 37     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 10     | -      | -      | 35     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 11     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 10     | -      | -      | 35     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 11     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 12     | -      | -      | 37     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 10     | -      | -      | 35     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 11     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 12     | -      | -      | 37     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 10     | -      | -      | 35     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B          | 25     | 11     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++---------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:30 . Memory (MB): peak = 1464.777 ; gain = 638.090
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:43 . Memory (MB): peak = 1529.297 ; gain = 702.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|bram3       | ram_reg          | 75 K x 12(READ_FIRST)  | W | R | 75 K x 12(READ_FIRST)  | W | R | Port A and B     | 0      | 36     | 
+|top         | bram_reg/ram_reg | 88 x 25(NO_CHANGE)     | W |   | 88 x 25(READ_FIRST)    | W | R | Port A and B     | 0      | 1      | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_0__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_0__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_1__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_1__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_2__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_2__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_3__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_3__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_4__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_4__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_5__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_5__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_6__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_6__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_7__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_7__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_8__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_8__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_9__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_9__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_10__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_10__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_11__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram3/ram_reg_1_11__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ov7670_cam1/ov7670_controller/ov7670_registers/sreg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance ov7670_cam1/ov7670_controller/ov7670_registers/sreg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance bram_reg/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:11 ; elapsed = 00:01:47 . Memory (MB): peak = 1529.297 ; gain = 702.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:01:56 . Memory (MB): peak = 1529.297 ; gain = 702.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:01:56 . Memory (MB): peak = 1529.297 ; gain = 702.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:19 ; elapsed = 00:01:58 . Memory (MB): peak = 1529.297 ; gain = 702.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:01:58 . Memory (MB): peak = 1529.297 ; gain = 702.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:58 . Memory (MB): peak = 1529.297 ; gain = 702.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:01:58 . Memory (MB): peak = 1529.297 ; gain = 702.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top         | imag_procesor/rgb2gray_cam1/r_we3_reg       | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|top         | imag_procesor/rgb2gray_cam2/r_we3_reg       | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|top         | imag_procesor/rgb2gray_cam1/r_line3_reg[8]  | 3      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|top         | imag_procesor/rgb2gray_cam1/r_pixel3_reg[9] | 3      | 10    | NO           | NO                 | YES               | 10     | 0       | 
+|top         | imag_procesor/rgb2gray_cam2/r_line3_reg[8]  | 3      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|top         | imag_procesor/rgb2gray_cam2/r_pixel3_reg[9] | 3      | 10    | NO           | NO                 | YES               | 10     | 0       | 
++------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|imag_transform | A*B         | 30     | 18     | -      | -      | 35     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 37     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 35     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 37     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 35     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 35     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 37     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 35     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 37     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 35     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|imag_transform | A*B         | 30     | 18     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pattern_gen    | A'*B        | 8      | 10     | -      | -      | 18     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     8|
+|2     |CARRY4   |   259|
+|3     |DSP48E1  |    17|
+|5     |LUT1     |   298|
+|6     |LUT2     |   647|
+|7     |LUT3     |   315|
+|8     |LUT4     |   382|
+|9     |LUT5     |   423|
+|10    |LUT6     |   690|
+|11    |MUXF7    |   118|
+|12    |MUXF8    |    30|
+|13    |RAMB18E1 |     1|
+|14    |RAMB36E1 |    37|
+|18    |SRL16E   |    40|
+|19    |FDRE     |  3753|
+|20    |FDSE     |    84|
+|21    |IBUF     |    39|
+|22    |OBUF     |    48|
+|23    |OBUFT    |     2|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:59 . Memory (MB): peak = 1529.297 ; gain = 702.609
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:06 ; elapsed = 00:01:46 . Memory (MB): peak = 1529.297 ; gain = 591.688
+Synthesis Optimization Complete : Time (s): cpu = 00:01:20 ; elapsed = 00:01:59 . Memory (MB): peak = 1529.297 ; gain = 702.609
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.204 . Memory (MB): peak = 1532.137 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 462 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1535.805 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 6b1f482e
+INFO: [Common 17-83] Releasing license: Synthesis
+153 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:26 ; elapsed = 00:02:36 . Memory (MB): peak = 1535.805 ; gain = 1104.512
+INFO: [Common 17-1381] The checkpoint 'G:/VIVADO17filese/completepro/completepro.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon May 15 15:23:46 2023...

@@ -1,0 +1,180 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Mon May 15 15:27:33 2023
+| Host         : DESKTOP-926DN33 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   102 |
+|    Minimum number of control sets                        |   102 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   484 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   102 |
+| >= 0 to < 4        |    17 |
+| >= 4 to < 6        |     7 |
+| >= 6 to < 8        |    13 |
+| >= 8 to < 10       |    10 |
+| >= 10 to < 12      |    12 |
+| >= 12 to < 14      |     4 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    39 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            2147 |          517 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             270 |           82 |
+| Yes          | No                    | No                     |             747 |          226 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             216 |           65 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+----------------+--------------+
+|              Clock Signal              |                              Enable Signal                              |                               Set/Reset Signal                               | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  ov7670_cam2_mclk_OBUF_BUFG            | vga_module1/horizontal_counter1/counter_pixel_reg                       | vga_module1/horizontal_counter1/counter_pixel_reg[5]_i_1_n_0                 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                         | com_to_mem1/UART_Loopback_module1/UART_RX_Inst/r_RX_Byte[6]_i_1_n_0     |                                                                              |                1 |              1 |         1.00 |
+|  vga_module1/horizontal_counter1/CLK   | vga_module1/vertical_counter1/counter_line_reg                          | vga_module1/vertical_counter1/counter_line_reg[5]_i_1_n_0                    |                1 |              1 |         1.00 |
+| ~clk50mhz_gen/clk50                    |                                                                         |                                                                              |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                         | com_to_mem1/UART_Loopback_module1/UART_RX_Inst/r_RX_Byte[0]_i_1_n_0     |                                                                              |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                         | com_to_mem1/UART_Loopback_module1/UART_RX_Inst/r_RX_Byte[7]_i_1_n_0     |                                                                              |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                         | com_to_mem1/UART_Loopback_module1/UART_RX_Inst/r_RX_Byte[1]_i_1_n_0     |                                                                              |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                         | com_to_mem1/UART_Loopback_module1/UART_RX_Inst/r_RX_Byte[2]_i_1_n_0     |                                                                              |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                         | com_to_mem1/UART_Loopback_module1/UART_RX_Inst/r_RX_Byte[5]_i_1_n_0     |                                                                              |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                         | debounce_switch_reset/r_state1_out                                      |                                                                              |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                         | com_to_mem1/UART_Loopback_module1/UART_RX_Inst/r_RX_Byte[4]_i_1_n_0     |                                                                              |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                         | com_to_mem1/UART_Loopback_module1/UART_RX_Inst/r_RX_Byte[3]_i_1_n_0     |                                                                              |                1 |              1 |         1.00 |
+|  ov7670_cam1_pclk_IBUF_BUFG            |                                                                         |                                                                              |                2 |              2 |         1.00 |
+|  ov7670_capture/pixel_counter00_out_0  |                                                                         |                                                                              |                1 |              2 |         2.00 |
+|  ov7670_capture/pixel_counter00_out    |                                                                         |                                                                              |                1 |              2 |         2.00 |
+|  com_to_mem1/clock_divider7seg/clk_out |                                                                         |                                                                              |                1 |              2 |         2.00 |
+|  ov7670_cam2_pclk_IBUF_BUFG            |                                                                         |                                                                              |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG                         | com_to_mem1/FSM1/FSM_sequential_r_next[3]_i_1_n_0                       |                                                                              |                2 |              4 |         2.00 |
+| ~imag_save/clk10                       |                                                                         | imag_procesor/imag_transform_cam2/r_new_x_reg[7]_0                           |                1 |              5 |         5.00 |
+|  ov7670_capture/pixel_counter00_out_0  | ov7670_cam2/ov7670_capture/byte2_0                                      |                                                                              |                1 |              5 |         5.00 |
+|  ov7670_capture/pixel_counter00_out    | ov7670_cam1/ov7670_capture/byte2_0                                      |                                                                              |                1 |              5 |         5.00 |
+|  ov7670_capture/pixel_counter00_out    | ov7670_cam1/ov7670_capture/byte4_1                                      |                                                                              |                1 |              5 |         5.00 |
+|  ov7670_capture/pixel_counter00_out_0  | ov7670_cam2/ov7670_capture/byte4_1                                      |                                                                              |                1 |              5 |         5.00 |
+| ~imag_save/clk10                       |                                                                         | imag_procesor/imag_transform_cam1/r_new_x_reg[7]_0                           |                1 |              5 |         5.00 |
+|  vga_module1/horizontal_counter1/CLK   | vga_module1/vertical_counter1/counter_line_reg                          |                                                                              |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG                         | default_reg_writer1/r_count                                             | default_reg_writer1/r_count[6]_i_1__0_n_0                                    |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG                         | default_reg_writer1/r_count[6]_i_1__0_n_0                               |                                                                              |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG                         | com_to_mem1/FSM1/r_addr_wr_reg[6]_i_2_n_0                               | com_to_mem1/FSM1/r_addr_wr_reg[6]_i_1_n_0                                    |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG                         | default_reg_writer1/p_0_in[24]                                          |                                                                              |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG                         | default_reg_writer1/r_data[8]_i_1__0_n_0                                |                                                                              |                3 |              7 |         2.33 |
+|  ov7670_cam2_mclk_OBUF_BUFG            | ov7670_cam1/ov7670_controller/i2c_sender/p_2_in                         | ov7670_cam1/ov7670_controller/i2c_sender/divider[6]_i_1_n_0                  |                3 |              7 |         2.33 |
+|  ov7670_cam2_mclk_OBUF_BUFG            | vga_module1/horizontal_counter1/counter_pixel_reg                       |                                                                              |                2 |              7 |         3.50 |
+|  ov7670_capture/pixel_counter00_out    | ov7670_cam1/ov7670_capture/byte1_3                                      |                                                                              |                2 |              7 |         3.50 |
+|  ov7670_cam2_mclk_OBUF_BUFG            | ov7670_cam2/ov7670_controller/i2c_sender/busy_sr_reg[31]_0              | ov7670_cam2/ov7670_controller/i2c_sender/divider[6]_i_1__0_n_0               |                2 |              7 |         3.50 |
+|  ov7670_capture/pixel_counter00_out    | ov7670_cam1/ov7670_capture/byte3_2                                      |                                                                              |                3 |              7 |         2.33 |
+|  ov7670_capture/pixel_counter00_out_0  | ov7670_cam2/ov7670_capture/byte3_2                                      |                                                                              |                1 |              7 |         7.00 |
+|  ov7670_capture/pixel_counter00_out_0  | ov7670_cam2/ov7670_capture/byte1_3                                      |                                                                              |                1 |              7 |         7.00 |
+|  clk_IBUF_BUFG                         | com_to_mem1/UART_Loopback_module1/UART_TX_Inst/r_TX_Data[7]_i_1_n_0     |                                                                              |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                         |                                                                         | imag_procesor/imag_transform_cam2/r_new_y_reg0                               |                3 |              9 |         3.00 |
+|  ov7670_cam2_mclk_OBUF_BUFG            | ov7670_cam1/ov7670_controller/i2c_sender/taken                          | ov7670_cam1/ov7670_controller/ov7670_registers/address_rep_rep[0]_i_1_n_0    |                2 |              9 |         4.50 |
+|  ov7670_cam2_mclk_OBUF_BUFG            | ov7670_cam2/ov7670_controller/i2c_sender/taken                          | ov7670_cam2/ov7670_controller/ov7670_registers/address_rep_rep[0]_i_1__0_n_0 |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG                         | pattern_gen1/o_addr1_i_1_n_0                                            | pattern_gen1/line_reg                                                        |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam1_DEPTH[8]_i_1_n_0                       |                                                                              |                2 |              9 |         4.50 |
+|  ov7670_capture/pixel_counter00_out    | ov7670_cam1/ov7670_capture/line[8]_i_2_n_0                              | ov7670_cam1/ov7670_capture/line[8]_i_1_n_0                                   |                2 |              9 |         4.50 |
+|  clk_IBUF_BUFG                         |                                                                         | imag_procesor/imag_transform_cam1/r_new_y_reg0                               |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam0_DEPTH                                  |                                                                              |                3 |              9 |         3.00 |
+|  ov7670_capture/pixel_counter00_out_0  | ov7670_cam2/ov7670_capture/line[8]_i_2__0_n_0                           | ov7670_cam2/ov7670_capture/line[8]_i_1__0_n_0                                |                2 |              9 |         4.50 |
+|  clk_IBUF_BUFG                         |                                                                         | imag_procesor/imag_transform_cam2/r_new_x_reg0                               |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                         |                                                                         | imag_procesor/imag_transform_cam1/r_new_x_reg0                               |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                         | pattern_gen1/column_reg                                                 | pattern_gen1/o_addr1_i_1_n_0                                                 |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                         | com_to_mem1/UART_Loopback_module1/UART_TX_Inst/r_Clock_Count            | com_to_mem1/UART_Loopback_module1/UART_TX_Inst/r_Clock_Count0                |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam0_WIDTH                                  |                                                                              |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam1_WIDTH[9]_i_1_n_0                       |                                                                              |                2 |             10 |         5.00 |
+|  ov7670_capture/pixel_counter00_out    | ov7670_cam1/ov7670_capture/pixel                                        | ov7670_cam1/ov7670_capture/line[8]_i_2_n_0                                   |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                         | com_to_mem1/UART_Loopback_module1/UART_RX_Inst/r_Clock_Count[9]_i_2_n_0 | com_to_mem1/UART_Loopback_module1/UART_RX_Inst/r_Clock_Count[9]_i_1__0_n_0   |                5 |             10 |         2.00 |
+|  ov7670_capture/pixel_counter00_out_0  | ov7670_cam2/ov7670_capture/pixel                                        | ov7670_cam2/ov7670_capture/line[8]_i_2__0_n_0                                |                3 |             10 |         3.33 |
+|  ov7670_cam2_mclk_OBUF_BUFG            | ov7670_cam1/ov7670_controller/ov7670_registers/busy_sr_0                | ov7670_cam1/ov7670_controller/ov7670_registers/busy_sr_reg[31]               |                2 |             11 |         5.50 |
+|  ov7670_cam2_mclk_OBUF_BUFG            | ov7670_cam1/ov7670_controller/ov7670_registers/busy_sr                  | ov7670_cam1/ov7670_controller/ov7670_registers/busy_sr_reg[31]_0             |                3 |             11 |         3.67 |
+|  clk_IBUF_BUFG                         | mode_selector/sel                                                       |                                                                              |                4 |             11 |         2.75 |
+|  clk_IBUF_BUFG                         |                                                                         | imag_procesor/imag_transform_cam1/cam_select_reg[0][0]                       |                7 |             12 |         1.71 |
+|  clk_IBUF_BUFG                         | com_to_mem1/FSM1/FSM_sequential_r_state_reg[0]_0                        | com_to_mem1/UART_Loopback_module1/UART_RX_Inst/r_RX_Byte_reg[0]_0            |                4 |             12 |         3.00 |
+|  clk_IBUF_BUFG                         | com_to_mem1/FSM1/E[0]                                                   |                                                                              |                8 |             12 |         1.50 |
+|  clk_IBUF_BUFG                         | clock_enable1/w_enable                                                  |                                                                              |                5 |             13 |         2.60 |
+|  clk_IBUF_BUFG                         | com_to_mem1/FSM1/r_addr_rd[16]_i_2_n_0                                  | com_to_mem1/FSM1/r_addr_rd[16]_i_1_n_0                                       |                4 |             16 |         4.00 |
+|  ov7670_cam2_mclk_OBUF_BUFG            | ov7670_cam1/ov7670_controller/i2c_sender/r_wait                         |                                                                              |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                         | com_to_mem1/FSM1/FSM_sequential_r_state_reg[2]_0                        | com_to_mem1/UART_Loopback_module1/UART_RX_Inst/r_RX_Byte_reg[0]_1            |                4 |             16 |         4.00 |
+|  ov7670_cam2_mclk_OBUF_BUFG            | ov7670_cam2/ov7670_controller/i2c_sender/r_wait                         |                                                                              |                4 |             16 |         4.00 |
+|  vga_module1/horizontal_counter1/CLK   |                                                                         |                                                                              |                8 |             17 |         2.12 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam0_T33                                    |                                                                              |                5 |             17 |         3.40 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam1_T33[24]_i_1_n_0                        |                                                                              |                5 |             17 |         3.40 |
+|  clk_IBUF_BUFG                         |                                                                         | debounce_switch_reset/p_0_in                                                 |                5 |             18 |         3.60 |
+|  ov7670_cam2_mclk_OBUF_BUFG            |                                                                         | ov7670_cam2/debounce_switch/p_0_in                                           |                5 |             18 |         3.60 |
+|  ov7670_cam2_mclk_OBUF_BUFG            |                                                                         | ov7670_cam1/debounce_switch/p_0_in                                           |                5 |             18 |         3.60 |
+| ~clk_IBUF_BUFG                         |                                                                         |                                                                              |               12 |             24 |         2.00 |
+|  clk_IBUF_BUFG                         |                                                                         | com_to_mem1/clock_divider7seg/next_state                                     |                7 |             24 |         3.43 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam0_T12                                    |                                                                              |               10 |             25 |         2.50 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam0_T13                                    |                                                                              |                9 |             25 |         2.78 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam0_T32                                    |                                                                              |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam1_T22[24]_i_1_n_0                        |                                                                              |                6 |             25 |         4.17 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam0_T11                                    |                                                                              |               13 |             25 |         1.92 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam0_T21                                    |                                                                              |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG                         | com_to_mem1/FSM1/r_data_reg[24]_i_2_n_0                                 | com_to_mem1/FSM1/r_data_reg[24]_i_1_n_0                                      |                8 |             25 |         3.12 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam0_T31                                    |                                                                              |                8 |             25 |         3.12 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam1_T11[24]_i_1_n_0                        |                                                                              |                6 |             25 |         4.17 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam0_T23                                    |                                                                              |                6 |             25 |         4.17 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam1_T12[24]_i_1_n_0                        |                                                                              |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam1_T13[24]_i_1_n_0                        |                                                                              |                6 |             25 |         4.17 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam1_T21[24]_i_1_n_0                        |                                                                              |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam1_T23[24]_i_1_n_0                        |                                                                              |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam1_T31[24]_i_1_n_0                        |                                                                              |                8 |             25 |         3.12 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam1_T32[24]_i_1_n_0                        |                                                                              |                9 |             25 |         2.78 |
+|  clk_IBUF_BUFG                         | imag_procesor/reg_reader1/r_cam0_T22                                    |                                                                              |                7 |             25 |         3.57 |
+|  clk_IBUF_BUFG                         |                                                                         | mode_selector/sel                                                            |                7 |             28 |         4.00 |
+|  clk_IBUF_BUFG                         |                                                                         | imag_procesor/reg_reader1/SR[0]                                              |               10 |             30 |         3.00 |
+|  ov7670_cam2_mclk_OBUF_BUFG            |                                                                         |                                                                              |               20 |             32 |         1.60 |
+|  clk_IBUF_BUFG                         |                                                                         | pattern_gen1/speed_counter_reg[31]_i_1_n_0                                   |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                         |                                                                         | imag_procesor/reg_reader1/RSTM                                               |               13 |             42 |         3.23 |
+|  ov7670_cam2_mclk_OBUF_BUFG            | ov7670_cam1/ov7670_controller/ov7670_registers/busy_sr                  |                                                                              |               12 |             52 |         4.33 |
+|  ov7670_cam2_mclk_OBUF_BUFG            | ov7670_cam1/ov7670_controller/ov7670_registers/busy_sr_0                |                                                                              |                9 |             52 |         5.78 |
+| ~imag_save/clk20                       |                                                                         |                                                                              |               32 |             91 |         2.84 |
+| ~imag_save/clk10                       |                                                                         |                                                                              |               33 |            111 |         3.36 |
+|  clk_IBUF_BUFG                         |                                                                         |                                                                              |              405 |           1901 |         4.69 |
++----------------------------------------+-------------------------------------------------------------------------+------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+
